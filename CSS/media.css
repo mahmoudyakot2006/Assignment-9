@@ -1,0 +1,191 @@
+/* mobile */
+@media all and (min-width: 300px) {
+
+    /* ~ navbar ~ */
+
+    .text-logo p {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        color: oklch(0.551 0.027 264.364);
+        display: none;
+    }
+
+    .btn-add span {
+        display: none;
+    }
+
+    .btn-bills {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        border: 0px;
+        background-color: white;
+        display: none;
+        transition: all 0.2s;
+    }
+
+    .btn-add {
+        padding: 10px 16px;
+        background-color: rgb(119, 41, 253);
+        border-radius: 10px;
+        border: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.2s;
+    }
+
+    .text-logo h1 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        color: oklch(0.21 0.034 264.665);
+    }
+
+    nav {
+        padding: 0px 16px;
+        margin-inline: auto;
+    }
+
+    .grid-quick {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        grid-template-areas:
+            "total favorites"
+            "emergency .";
+    }
+
+    .display {
+        display: block;
+    }
+
+    aside {
+        position: sticky;
+        top: 112px;
+        width: 100%;
+        align-self: flex-start;
+    }
+
+    .btn-form {
+        flex-direction: column;
+        padding-top: 8px;
+    }
+
+    .grid-cont {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "."
+            ".";
+    }
+}
+
+/* xs */
+@media all and (max-width: 500px) {}
+
+/* sm */
+@media all and (min-width: 576px) {
+
+    /* ~ navbar ~ */
+
+    .text-logo p {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        color: oklch(0.551 0.027 264.364);
+        display: block;
+    }
+
+    .btn-add span {
+        display: inline;
+    }
+
+    .btn-bills {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        border: 0px;
+        background-color: white;
+        display: inline-block;
+        transition: all 0.2s;
+    }
+
+    .btn-add {
+        padding: 10px 20px;
+        background-color: rgb(119, 41, 253);
+        border-radius: 10px;
+        border: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.2s;
+    }
+
+    .text-logo h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        color: oklch(0.21 0.034 264.665);
+    }
+
+    nav {
+        padding: 0px 32px;
+        margin-inline: auto;
+    }
+
+    .btn-form {
+        flex-direction: row;
+        padding-top: 8px;
+    }
+
+
+
+}
+
+/* md */
+@media all and (min-width: 768px) {
+    .grid-quick {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+        grid-template-areas:
+            "total favorites emergency";
+    }
+
+    .grid-cont {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+        grid-template-areas:
+            ". .";
+    }
+}
+
+/* lg */
+@media all and (min-width: 992px) {}
+
+/* xl */
+@media all and (min-width: 1200px) {
+    .display {
+        display: flex;
+
+        aside {
+            position: sticky;
+            top: 112px;
+            width: 320px;
+            align-self: flex-start;
+        }
+    }
+}
+
+/* xxl */
+@media all and (min-width: 1400px) {}

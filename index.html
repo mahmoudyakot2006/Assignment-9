@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/media.css">
+</head>
+
+<body>
+
+    <!-- ~ navbar ~ -->
+
+    <header>
+        <nav>
+            <div class="d-flex align-items-center justify-content-between h-80">
+                <div class="logo-nav d-flex align-items-center gap-3">
+                    <div class="i-logo">
+                        <i class="fa-solid fa-address-book" style="color: rgb(255, 255, 255); font-size: 20px;"></i>
+                    </div>
+                    <div class="text-logo">
+                        <h1>Contact<span>Hub</span></h1>
+                        <p>Smart Contact Manager</p>
+                    </div>
+                </div>
+                <div class="action-nav d-flex align-items-center gap-2">
+                    <button class="btn-add" id="addForm">
+                        <i class="fa-solid fa-plus" style="color: rgb(255, 255, 255);"></i>
+                        <p>Add <span>Contact</span></p>
+                    </button>
+                    <button class="btn-bills">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                    <button class="btn-bills">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <div class="profile-img">
+                            <img src="image/avatar (1).jpg" alt="">
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ! main ! -->
+
+    <main>
+        <section class="quick-states">
+            <div class="grid-quick">
+                <div class="total">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="i-g-quick bg-blue">
+                            <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                        <div class="text-g-quick">
+                            <p>TOTAL</p>
+                            <h4>0</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="favorites">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="i-g-quick bg-yellow">
+                            <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                        <div class="text-g-quick">
+                            <p>FAVORITES</p>
+                            <h4>0</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="emergency">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="i-g-quick bg-red">
+                            <i class="fa-solid fa-heart-pulse" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                        <div class="text-g-quick">
+                            <p>EMERGENCY</p>
+                            <h4>0</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="display  gap-5">
+            <div class="all-contacts">
+                <section class="con-contact">
+                    <div class="cap-contact">
+                        <div>
+                            <h2>All Contacts</h2>
+                            <p>Manage and organize your 0 contacts</p>
+                        </div>
+                    </div>
+                    <div class="search-bar position-relative">
+                        <div class="i-search position-absolute">
+                            <i class="fa-solid fa-magnifying-glass" style="color: rgb(153, 161, 175);"></i>
+                        </div>
+                        <input type="text" placeholder="Search by name, phone, or email ..." class="w-100 bg-white"
+                            id="searchInput" oninput="searchFun()">
+                    </div>
+                    <div class="contacts-gird">
+                        <div class="grid-cont" id="cardRow">
+                            <!-- <div class="con-grid">
+                                <div class="i-con-grid">
+                                    <i class="fa-solid fa-address-book"
+                                        style="color: rgb(209, 213, 220); font-size: 30px;"></i>
+                                </div>
+                                <h6>No contacts found</h6>
+                                <p>Click "Add Contact" to get started</p>
+                            </div> -->
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <aside>
+                <section class="fav">
+                    <div class="up-fav">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="i-fav d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
+                            </div>
+                            <div class="text-up">
+                                <h2>Favorites</h2>
+                                <p>Quick access to starred contacts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="down-fav">
+                        <div class="text-down text-center">
+                            <p>No favorites yet</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="emer">
+                    <div class="up-emer">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="i-emer d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-heart-pulse" style="color: rgb(255, 255, 255);"></i>
+                            </div>
+                            <div class="text-up">
+                                <h2>Emergency</h2>
+                                <p>Important contacts for urgent calls</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="down-emer">
+                        <div class="text-down text-center">
+                            <p>No emergency contacts</p>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- ^contact form^ -->
+
+    <div class="contact-form" id="contact-form">
+        <div class="con-form">
+            <div class="form">
+                <div class="header-form">
+                    <h2>Add New Contact</h2>
+                    <button id="closeContForm"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <form id="myForm">
+                    <div class="img-form gap-3">
+                        <div class="i-form-img rounded-circle">
+                            <i class="fa-solid fa-user" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                        <label for="cardImg" class="up-img gap-2">
+                            <i class="fa-solid fa-camera" style="color: rgb(106, 114, 130);"></i>
+                            <span>Change Photo</span>
+                            <input type="file" accept="image/*" class="hidden" id="cardImg">
+                        </label>
+                    </div>
+                    <div class="mb-20">
+                        <label>Full Name <span class="require">*</span></label>
+                        <input type="text" required placeholder="Enter full name" id="cardName">
+                    </div>
+                    <div class="mb-20">
+                        <label>Phone Number <span class="require">*</span></label>
+                        <input type="text" required placeholder="e.g., 01012345678" id="cardNum">
+                    </div>
+                    <div class="mb-20">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="name@example.com" id="cardGmail">
+                    </div>
+                    <div class="mb-20">
+                        <label>Address</label>
+                        <input type="text" placeholder="Enter address" id="cardAddress">
+                    </div>
+                    <div class="mb-20">
+                        <label>Group</label>
+                        <select name="" id="cardCat">
+                            <option value="" selected disabled>Select a group</option>
+                            <option>Family</option>
+                            <option>Friends</option>
+                            <option>Work</option>
+                            <option>School</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-20">
+                        <label>Notes</label>
+                        <textarea name="" id="" style="height: 68px;"></textarea>
+                    </div>
+                    <div class="type-btn gap-4">
+                        <label for="check-fav" class="gap-2 d-inline-flex align-items-center">
+                            <input type="checkbox" id="check-fav">
+                            <span>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 185, 0);"></i>
+                                Favorite
+                            </span>
+                        </label>
+                        <label for="check-emer" class="gap-2 d-inline-flex align-items-center">
+                            <input type="checkbox" id="check-emer">
+                            <span>
+                                <i class="fa-solid fa-heart-pulse" style="color: rgb(255, 32, 86);"></i>
+                                Emergency
+                            </span>
+                        </label>
+                    </div>
+                    <div class="btn-form gap-3 d-flex">
+                        <button class="cancel-f-btn" type="button" id="cancelForm">Cancel</button>
+                        <button class="save-f-btn" type="submit">
+                            <i class="fa-solid fa-check" style="color: rgb(255, 255, 255);"></i>
+                            Save Contact
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
